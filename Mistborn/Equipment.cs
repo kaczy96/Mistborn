@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mistborn
 {
-    class Ekwipunek
+    class Equipment
     {
         public int Damage { get; set; }
         public int Endurance { get; set; }

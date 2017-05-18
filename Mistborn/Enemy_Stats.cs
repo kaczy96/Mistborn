@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mistborn
 {
-    class PrzciwnicyStats
+    class Enemy_Stats
     {
         public int Hp { get; set; }
         public int Strength { get; set; }

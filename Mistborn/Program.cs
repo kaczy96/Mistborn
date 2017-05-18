@@ -27,9 +27,9 @@ namespace Mistborn
                 Console.WriteLine("1) Vin - female");
                 Console.WriteLine("2) Elend - male ");
                 
-                int wybor = int.Parse(Console.ReadLine());
-                while(wybor !=1 && wybor !=2)
-                wybor = int.Parse(Console.ReadLine() + "Type property value");
+                int chose = int.Parse(Console.ReadLine());
+                while(chose !=1 && chose !=2)
+                chose = int.Parse(Console.ReadLine() + "Type property value");
 
             Console.Clear();
                 Console.WriteLine("Take your starting gift: ");
@@ -37,16 +37,16 @@ namespace Mistborn
                 Console.WriteLine("1) Flask with allomancy metals");
                 Console.WriteLine("2) Kandra companion");
                 Console.WriteLine("3) Glass dagger");
-                int wybor2 = int.Parse(Console.ReadLine());
-                while (wybor2 != 1 && wybor2 != 2 &&
-                wybor2!=3)
-                wybor2 = int.Parse(Console.ReadLine() + "Type property value");
+                int chose2 = int.Parse(Console.ReadLine());
+                while (chose2 != 1 && chose2 != 2 &&
+                chose2!=3)
+                chose2 = int.Parse(Console.ReadLine() + "Type property value");
 
-            switch (wybor)
+            switch (chose)
                 {
                     case (1):
                         {
-                            switch (wybor2)
+                            switch (chose2)
                             {
                                 case (1): //Vin/Flask
                                     {
@@ -79,7 +79,7 @@ namespace Mistborn
                                         Character.Defense = 1;
                                         Character.Luck = 1;
 
-                                        Ekwipunek Glass_dagger = new Ekwipunek();
+                                        Equipment Glass_dagger = new Equipment();
                                         Glass_dagger.Damage = 3;
                                         Glass_dagger.Endurance = 3;
                                         break;
@@ -89,7 +89,7 @@ namespace Mistborn
                         }
                     case (2):
                         {
-                            switch (wybor2)
+                            switch (chose2)
                             {
                                 case (1): //Elend/FFlask
                                     {
@@ -123,7 +123,7 @@ namespace Mistborn
                                         Character.Luck = 2;
                                         Character.Metal_bottle = 1;
 
-                                        Ekwipunek Glass_dagger = new Ekwipunek();
+                                        Equipment Glass_dagger = new Equipment();
                                         Glass_dagger.Damage = 3;
                                         Glass_dagger.Endurance = 3;
                                         break;
@@ -136,42 +136,42 @@ namespace Mistborn
 
 
 
-                Ekwipunek brak_broni = new Ekwipunek();
-                brak_broni.Error = 0;
+                Equipment no_weapon = new Equipment();
+                no_weapon.Error = 0;
 
                 Console.Clear();
-                Console.WriteLine("Twoja postać: ");
+                Console.WriteLine("Your Character: ");
                 Console.WriteLine(Character.Name);
                 Console.WriteLine();
 
                 Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine("Zdrowie: {0}", Character.Hp);
-                Console.WriteLine("Siła: {0}", Character.Strength);
-                Console.WriteLine("Zręczność: {0}", Character.Agility);
+                Console.WriteLine("Health: {0}", Character.Hp);
+                Console.WriteLine("Strength: {0}", Character.Strength);
+                Console.WriteLine("Agility: {0}", Character.Agility);
                 Console.WriteLine("Defense: {0}", Character.Defense);
-                Console.WriteLine("Szczęście: {0}", Character.Luck);
+                Console.WriteLine("Luck: {0}", Character.Luck);
                 Console.ResetColor();
                 Console.ReadKey();
                 Console.Clear();
 
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("SAZED: ");
-                string przerywnik = "------------------------------------------------------";
-                Console.WriteLine(przerywnik);
+                string pause = "------------------------------------------------------";
+                Console.WriteLine(pause);
                 Console.WriteLine("Witaj {0} musisz znaleźć Zane i dowiedzieć się czego chce i jakie ma plany wobec miasta.", Character.Name);
                 Console.ReadKey();
                 Console.WriteLine("Szybko!");
                 Console.WriteLine("Nie ma czasu do stracenia!");
                 Console.ReadKey();
-                string ime_bohatera;
-                if (wybor == 1)
-                    ime_bohatera = "VIN";
+                string character_name;
+                if (chose == 1)
+                    character_name = "VIN";
                 else
-                    ime_bohatera = "ELEND";
+                    character_name = "ELEND";
                 Console.WriteLine();
                 Console.WriteLine();
-                Console.WriteLine(ime_bohatera);
-                Console.WriteLine(przerywnik);
+                Console.WriteLine(character_name);
+                Console.WriteLine(pause);
                 Console.WriteLine("Wyruszam natychmiast!");
 
                 Console.ReadKey();
@@ -197,23 +197,23 @@ namespace Mistborn
                 Console.WriteLine("Twoim jedynym limitem jest ilość metali, które posiadasz w żołądku.");
                 Console.ReadKey();
                 Console.Clear();
-                int liczba_fiolek;
-                if (wybor2 == 1)
-                    liczba_fiolek = 2;
+                int flask_amount;
+                if (chose2 == 1)
+                    flask_amount = 2;
                 else
-                    liczba_fiolek = 1;
-                Console.WriteLine("***Posiadasz {0} fiolek z metalami***", liczba_fiolek);
+                    flask_amount = 1;
+                Console.WriteLine("***Posiadasz {0} fiolek z metalami***", flask_amount);
                 Console.ReadKey();
                 Console.Clear();
-                if (wybor2 == 2)
+                if (chose2 == 2)
                 {
                     Console.WriteLine("TENSOON:");
-                    Console.WriteLine(przerywnik);
+                    Console.WriteLine(pause);
                     Console.WriteLine("Lepszej pogody nie było, prawda?");
                     Console.ReadKey();
                     Console.Clear();
                     Console.WriteLine(Character.Name);
-                    Console.WriteLine(przerywnik);
+                    Console.WriteLine(pause);
                     Console.WriteLine("Nie marudź, ty jak chcesz to zmienisz sobie ciało, ja nie mam takiego komfortu");
                     Console.ReadKey();
                     Console.Clear();
