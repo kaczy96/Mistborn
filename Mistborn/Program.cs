@@ -12,35 +12,35 @@ namespace Mistborn
         static void Main(string[] args)
         {
             Stats Character = new Stats();
-            Console.WriteLine("Na podstawie książek");
+            Console.WriteLine("Based on:");
             Console.ReadKey();
             Console.Clear();
-            Console.WriteLine("Brandona Sandersona");
+            Console.WriteLine("Brandon Sanderson book:");
             Console.ReadKey();
             Console.Clear();
-            Console.WriteLine("''Z mgły zrodzony''");
+            Console.WriteLine("''Mistborn''");
             Console.ReadKey();
             Console.Clear();
 
             
-                Console.WriteLine("Wybierz postać: ");
-                Console.WriteLine("1) Vin - kobieta");
-                Console.WriteLine("2) Elend - mężczyzna");
+                Console.WriteLine("Choose character: ");
+                Console.WriteLine("1) Vin - female");
+                Console.WriteLine("2) Elend - male ");
                 
                 int wybor = int.Parse(Console.ReadLine());
                 while(wybor !=1 && wybor !=2)
-                wybor = int.Parse(Console.ReadLine() + "Wpisz poprawną wartość");
+                wybor = int.Parse(Console.ReadLine() + "Type property value");
 
             Console.Clear();
-                Console.WriteLine("Wybierz swój dar początkowy: ");
+                Console.WriteLine("Take your starting gift: ");
                 Console.WriteLine();
-                Console.WriteLine("1) Fiolka z alomantycznymi metalami");
-                Console.WriteLine("2) Towarzysz Kandra");
-                Console.WriteLine("3) Szklany sztylet");
+                Console.WriteLine("1) Flask with allomancy metals");
+                Console.WriteLine("2) Kandra companion");
+                Console.WriteLine("3) Glass dagger");
                 int wybor2 = int.Parse(Console.ReadLine());
                 while (wybor2 != 1 && wybor2 != 2 &&
                 wybor2!=3)
-                wybor2 = int.Parse(Console.ReadLine() + "Wpisz poprawną wartość");
+                wybor2 = int.Parse(Console.ReadLine() + "Type property value");
 
             switch (wybor)
                 {
@@ -48,7 +48,7 @@ namespace Mistborn
                         {
                             switch (wybor2)
                             {
-                                case (1): //Vin/Fiolka
+                                case (1): //Vin/Flask
                                     {
                                         Character.Name = "Vin";
                                         Character.Hp = 15;
@@ -59,7 +59,7 @@ namespace Mistborn
                                         Character.Metal_bottle = 2;
                                         break;
                                     }
-                                case (2): //Vin/Towarzysz
+                                case (2): //Vin/Companion
                                     {
                                         Character.Name = "Vin";
                                         Character.Hp = 25;
@@ -70,7 +70,7 @@ namespace Mistborn
                                         Character.Metal_bottle = 1;
                                         break;
                                     }
-                                case (3): //Vin/Sztylet
+                                case (3): //Vin/Dagger
                                     {
                                         Character.Name = "Vin";
                                         Character.Hp = 15;
@@ -79,9 +79,9 @@ namespace Mistborn
                                         Character.Defense = 1;
                                         Character.Luck = 1;
 
-                                        Ekwipunek Szklany_sztylet = new Ekwipunek();
-                                        Szklany_sztylet.Obrazenia = 3;
-                                        Szklany_sztylet.Wytrzymalosc = 3;
+                                        Ekwipunek Glass_dagger = new Ekwipunek();
+                                        Glass_dagger.Damage = 3;
+                                        Glass_dagger.Endurance = 3;
                                         break;
                                     }
                             }
@@ -91,7 +91,7 @@ namespace Mistborn
                         {
                             switch (wybor2)
                             {
-                                case (1): //Elend/Fiolka
+                                case (1): //Elend/FFlask
                                     {
                                         Character.Name = "Elend";
                                         Character.Hp = 20;
@@ -102,7 +102,7 @@ namespace Mistborn
                                         Character.Metal_bottle = 2;
                                         break;
                                     }
-                                case (2): //Elend/Towarzysz
+                                case (2): //Elend/Companion
                                     {
                                         Character.Name = "Elend";
                                         Character.Hp = 30;
@@ -113,7 +113,7 @@ namespace Mistborn
                                         Character.Metal_bottle = 1;
                                         break;
                                     }
-                                case (3): //Elend/Sztylet
+                                case (3): //Elend/Dagger
                                     {
                                         Character.Name = "Elend";
                                         Character.Hp = 20;
@@ -123,9 +123,9 @@ namespace Mistborn
                                         Character.Luck = 2;
                                         Character.Metal_bottle = 1;
 
-                                        Ekwipunek Szklany_sztylet = new Ekwipunek();
-                                        Szklany_sztylet.Obrazenia = 3;
-                                        Szklany_sztylet.Wytrzymalosc = 3;
+                                        Ekwipunek Glass_dagger = new Ekwipunek();
+                                        Glass_dagger.Damage = 3;
+                                        Glass_dagger.Endurance = 3;
                                         break;
                                     }
                             }
@@ -148,7 +148,7 @@ namespace Mistborn
                 Console.WriteLine("Zdrowie: {0}", Character.Hp);
                 Console.WriteLine("Siła: {0}", Character.Strength);
                 Console.WriteLine("Zręczność: {0}", Character.Agility);
-                Console.WriteLine("Obrona: {0}", Character.Defense);
+                Console.WriteLine("Defense: {0}", Character.Defense);
                 Console.WriteLine("Szczęście: {0}", Character.Luck);
                 Console.ResetColor();
                 Console.ReadKey();

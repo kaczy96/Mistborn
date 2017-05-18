@@ -23,7 +23,7 @@ namespace Mistborn
             return Agility * Strength * (Luck/2) * Gift;
         }
 
-        int obrona()
+        int Self_Defense()
         {
             return Agility * Defense * (Luck/2) * Gift;
         }

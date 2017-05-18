@@ -8,18 +8,18 @@ namespace Mistborn
 {
     class Ekwipunek
     {
-        public int Obrazenia { get; set; }
-        public int Wytrzymalosc { get; set; }
-        public int Obrona { get; set; }
+        public int Damage { get; set; }
+        public int Endurance { get; set; }
+        public int Defense { get; set; }
 
         public int Error { get; set; }
         
 
 
-        int Atak_bronia()
+        int Weapon_atack()
         {
-            if (Wytrzymalosc > 0)
-                return Obrazenia;
+            if (Endurance > 0)
+                return Damage;
             else
                 return Error;
         }
